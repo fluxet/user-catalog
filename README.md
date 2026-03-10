@@ -1,4 +1,4 @@
-# Users Catalog (React + TypeScript)
+# Users Catalog Page
 
 Test application: user catalog with public API [dummyjson users](https://dummyjson.com/docs/users).
 
