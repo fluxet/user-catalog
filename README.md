@@ -2,6 +2,8 @@
 
 Test application: user catalog with public API [dummyjson users](https://dummyjson.com/docs/users).
 
+[Demo](https://user-catalog-hazel.vercel.app/)
+
 ## Implemented
 
 - User list (name, email, phone number, avatar, age, company)
