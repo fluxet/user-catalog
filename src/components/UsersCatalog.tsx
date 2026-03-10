@@ -107,14 +107,15 @@ const UsersCatalog = () => {
     const windowSize = 5;
     const half = Math.floor(windowSize / 2);
 
-    let start = Math.max(1, currentPage - half);
-    const endLimit = Math.min(totalPages, start + windowSize - 1);
-    start = Math.max(1, endLimit - windowSize + 1);
+    const tentativeStart = Math.max(1, currentPage - half);
+    const endLimit = Math.min(totalPages, tentativeStart + windowSize - 1);
+    const startPage = Math.max(1, endLimit - windowSize + 1);
 
-    const pages: number[] = [];
-    for (let page = start; page <= endLimit; page += 1) {
-      pages.push(page);
-    }
+    const pages = Array.from(
+      { length: endLimit - startPage + 1 },
+      (_, i) => startPage + i
+    );
+
     return pages;
   }, [currentPage, totalPages]);
 
