@@ -147,7 +147,7 @@ const UsersCatalog = () => {
         </div>
       )}
       {loading && (
-        <div className="absolute mt-4 w-full max-w-md rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 text-sm text-blue-700">
+        <div className="md:absolute md:right-5 md:top-6 max-lg:mt-4 w-56 max-w-md rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 text-sm text-blue-700">
           Загрузка...
         </div>
       )}
