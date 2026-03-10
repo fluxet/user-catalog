@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import UserCard from './UserCard';
 
 export type User = {
@@ -103,21 +103,17 @@ const UsersCatalog = () => {
     }
   }, [currentPage, totalPages]);
 
-  const pageNumbers = useMemo(() => {
-    const windowSize = 5;
-    const half = Math.floor(windowSize / 2);
+  const windowSize = 5;
+  const half = Math.floor(windowSize / 2);
 
-    const tentativeStart = Math.max(1, currentPage - half);
-    const endLimit = Math.min(totalPages, tentativeStart + windowSize - 1);
-    const startPage = Math.max(1, endLimit - windowSize + 1);
+  const tentativeStart = Math.max(1, currentPage - half);
+  const endLimit = Math.min(totalPages, tentativeStart + windowSize - 1);
+  const startPage = Math.max(1, endLimit - windowSize + 1);
 
-    const pages = Array.from(
-      { length: endLimit - startPage + 1 },
-      (_, i) => startPage + i
-    );
-
-    return pages;
-  }, [currentPage, totalPages]);
+  const pageNumbers = Array.from(
+    { length: endLimit - startPage + 1 },
+    (_, i) => startPage + i
+  );
 
   const paginationButtonBase =
     'rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50';
