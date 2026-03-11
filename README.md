@@ -8,7 +8,7 @@ Test application: user catalog with public API [dummyjson users](https://dummyjs
 
 - User list (name, email, phone number, avatar, age, company)
 - Search by user name
-- Pagination via `limit` and `skip`
+- Pagination
 - Download status, errors, and empty results
 
 

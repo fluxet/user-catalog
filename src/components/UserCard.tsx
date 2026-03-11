@@ -16,7 +16,7 @@ const UserCard = ({user}: UserCardProps) => (
         <h2 className="truncate text-base font-semibold text-slate-900">
           {user.firstName} {user.lastName}
         </h2>
-        <p className="truncate text-sm text-gray-500 font-bold">{user.email}</p>
+        <p className="truncate text-sm text-gray-500 font-bold" title={user.email}>{user.email}</p>
         <p className="text-sm text-slate-600">{user.phone}</p>
         <p className="mt-1 text-sm text-slate-600">
           Возраст: {user.age}
